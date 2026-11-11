@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080b18">
+  <meta name="description" content="NEO ARCADE — une mini-arcade futuriste, jouable partout, même hors ligne.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/icon-192.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <title>NEO ARCADE — Play beyond limits</title>
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="NEO ARCADE accueil"><span class="brand-mark">N</span><span>NEO<span class="brand-light"> ARCADE</span></span></a>
+    <div class="top-actions"><button class="account-button" id="account-open">CONNEXION</button><span class="account-name" id="account-name" hidden></span><span class="online-state"><i></i><span id="connection-label">SYSTÈME PRÊT</span></span><button class="icon-button" id="sound-toggle" aria-label="Activer ou couper le son" title="Son">♫</button></div>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span class="eyebrow-line"></span> ARCADE SYSTEM / 001</p><h1>PLAY BEYOND<br><span>LIMITS.</span></h1><p class="hero-sub">Cinq défis. Une seule mission : battre tes records.<br>Joue, progresse et construis ta légende.</p><div class="hero-buttons"><a class="primary-button" href="#games">EXPLORER LES JEUX <span>↗</span></a><span class="micro-note">NO WIFI? NO PROBLEM.</span></div></div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="core"><div class="core-inner">N<span>°</span></div></div><div class="art-label label-top">NEURAL<br>ENGINE <b>ONLINE</b></div><div class="art-label label-bottom">EST. 2026 <b>///</b> LEVEL UP</div><div class="spark spark-one"></div><div class="spark spark-two"></div></div>
+    </section>
+    <section class="profile-panel">
+      <div class="profile-heading"><div><p class="eyebrow">PLAYER PROFILE</p><h2>TON ESPACE DE JEU</h2></div><div class="level-chip">LVL <strong id="level-number">1</strong></div></div>
+      <div class="stats-grid"><div class="stat"><span class="stat-icon">✦</span><div><strong id="xp-total">0</strong><small>XP TOTAL</small></div></div><div class="stat"><span class="stat-icon">◈</span><div><strong id="games-played">0</strong><small>PARTIES</small></div></div><div class="stat"><span class="stat-icon">⌁</span><div><strong id="best-score">—</strong><small>MEILLEUR SCORE</small></div></div><div class="stat"><span class="stat-icon">♛</span><div><strong id="achievement-count">0/6</strong><small>SUCCÈS</small></div></div></div>
+      <div class="xp-track"><div class="xp-caption"><span>PROGRESSION VERS LE NIVEAU <b id="next-level">2</b></span><span id="xp-progress-label">0 / 100 XP</span></div><div class="progress-bar"><span id="xp-progress"></span></div></div>
+    </section>
+    <section class="games-section" id="games"><div class="section-heading"><div><p class="eyebrow">SELECT YOUR CHALLENGE</p><h2>CHOOSE YOUR GAME<span class="accent">.</span></h2></div><span class="section-index">01 — 05</span></div>
+      <div class="game-grid">
+        <article class="game-card reaction-card"><div class="card-visual visual-reaction"><div class="target-ring"><span>⚡</span></div><span class="visual-code">REFLEX.exe</span></div><div class="card-content"><div class="card-meta"><span class="tag">RÉFLEXES</span><span class="best-label">RECORD <b id="best-reaction">—</b></span></div><h3>REACTION</h3><p>Teste tes réflexes. Attends le signal et clique le plus vite possible.</p><button class="play-button" data-game="reaction">JOUER <span>→</span></button></div></article>
+        <article class="game-card memory-card"><div class="card-visual visual-memory"><div class="mini-cards"><i>✦</i><i>◈</i><i>⌘</i><i>✦</i></div><span class="visual-code">MEMORY.sys</span></div><div class="card-content"><div class="card-meta"><span class="tag">MÉMOIRE</span><span class="best-label">RECORD <b id="best-memory">—</b></span></div><h3>MEMORY</h3><p>Retrouve toutes les paires. Concentre-toi et mémorise chaque symbole.</p><button class="play-button" data-game="memory">JOUER <span>→</span></button></div></article>
+        <article class="game-card rush-card"><div class="card-visual visual-rush"><div class="number-cloud"><b>03</b><b>01</b><b>04</b><b>02</b></div><span class="visual-code">NUMBER.run</span></div><div class="card-content"><div class="card-meta"><span class="tag">VITESSE</span><span class="best-label">RECORD <b id="best-rush">—</b></span></div><h3>NUMBER RUSH</h3><p>Retrouve les nombres dans l'ordre. Le chrono tourne : à toi de jouer.</p><button class="play-button" data-game="rush">JOUER <span>→</span></button></div></article>
+      </div>
+    </section>
+    <section class="games-section extra-section"><div class="section-heading"><div><p class="eyebrow">NEW GENERATION</p><h2>V2 EXCLUSIVES<span class="accent">.</span></h2></div><span class="section-index">02 — 02</span></div><div class="game-grid"><article class="game-card snake-card"><div class="card-visual snake-card-visual"><div class="new-game-symbol">🐍</div><span class="visual-code">NEON SNAKE.exe</span></div><div class="card-content"><div class="card-meta"><span class="tag">ARCADE</span><span class="best-label">NEO ARCADE</span></div><h3>NEON SNAKE</h3><p>Attrape les cellules lumineuses, grandis et évite les murs et ta propre queue.</p><button class="play-button" data-game="snake">JOUER <span>→</span></button></div></article><article class="game-card aim-card"><div class="card-visual aim-card-visual"><div class="new-game-symbol">◎</div><span class="visual-code">NEON AIM.exe</span></div><div class="card-content"><div class="card-meta"><span class="tag">PRÉCISION</span><span class="best-label">NEO ARCADE</span></div><h3>NEON AIM</h3><p>Vise les cibles qui apparaissent. Enchaîne les tirs avant la fin du chrono.</p><button class="play-button" data-game="aim">JOUER <span>→</span></button></div></article></div></section>
+    <section class="tools-section"><div class="section-heading"><div><p class="eyebrow">PLAYER HUB</p><h2>TON ARCADE<span class="accent">.</span></h2></div></div><div class="hub-grid"><article class="hub-card"><h3>⚔ BATTLE ARENA</h3><p>Défie un ami sur le même appareil en duel de réflexes.</p><button class="play-button" id="local-battle">LANCER UN BATTLE LOCAL →</button><p class="muted-note">Battle en ligne : prochaine intégration après validation du système de comptes.</p></article><article class="hub-card"><h3>✦ PERSONNALISATION</h3><label>Avatar <select id="avatar-choice"><option value="1">⚡ Avatar 1</option><option value="2">👾 Avatar 2</option><option value="3">🤖 Avatar 3</option><option value="4">🦊 Avatar 4</option><option value="5">🐼 Avatar 5</option><option value="6">👽 Avatar 6</option><option value="7">🐸 Avatar 7</option><option value="8">🦄 Avatar 8</option><option value="9">🐲 Avatar 9</option><option value="10">💎 Avatar 10</option></select></label><label>Thème <select id="theme-choice"><option value="1">Neon Cyan</option><option value="2">Cyber Purple</option><option value="3">Hot Pink</option><option value="4">Toxic Green</option><option value="5">Solar Gold</option><option value="6">Ice Blue</option><option value="7">Crimson</option><option value="8">Matrix</option><option value="9">Sunset</option><option value="10">Mono</option></select></label><label class="toggle-line"><input type="checkbox" id="rgb-toggle" checked> Effets RGB animés</label><label>Fond d'écran personnalisé <input type="file" id="wallpaper-upload" accept="image/*"></label><button class="text-button" id="wallpaper-clear">RETIRER LE FOND PERSONNALISÉ</button></article><article class="hub-card"><h3>🏆 RECORDS & CLASSEMENT</h3><button class="play-button" id="records-open">VOIR TOUS MES RECORDS →</button><div id="leaderboard-list" class="leaderboard-list"></div><p class="muted-note">Classement local sur cet appareil. Le classement mondial nécessite le backend en ligne.</p></article></div></section>
+    <section class="bottom-grid"><div class="achievements-panel"><div class="section-heading compact"><div><p class="eyebrow">MILESTONES</p><h2>SUCCÈS</h2></div><span class="section-index">02</span></div><div id="achievements" class="achievement-list"></div></div><div class="system-panel"><p class="eyebrow">SYSTEM STATUS</p><h2>READY FOR<br><span>ANYWHERE.</span></h2><p>NEO ARCADE fonctionne sur iPhone, iPad, Mac et PC. Tes progrès sont enregistrés sur cet appareil.</p><div class="system-status"><i></i><span id="offline-status">MODE HORS LIGNE DISPONIBLE APRÈS INSTALLATION</span></div></div></section>
+    <footer><span>NEO ARCADE <b>© 2026</b></span><span>BUILT TO PLAY. DESIGNED TO LAST.</span><button id="reset-data" class="text-button">RÉINITIALISER LES DONNÉES</button></footer>
+  </main>
+  <div class="modal-backdrop" id="game-modal" hidden><section class="game-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-top"><span class="eyebrow" id="modal-kicker">GAME SESSION</span><button id="close-modal" class="icon-button" aria-label="Fermer">×</button></div><h2 id="modal-title">REACTION</h2><div id="game-area" class="game-area"></div><p id="game-message" class="game-message" aria-live="polite"></p><div class="modal-footer"><span id="game-hint">READY PLAYER ONE</span><span id="game-xp">+ XP À GAGNER</span></div></section></div>
+  <section class="auth-backdrop" id="auth-modal" hidden>
+    <div class="auth-panel" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <div class="modal-top"><span class="eyebrow">PLAYER ID / NEO NETWORK</span><button class="icon-button" id="auth-close" aria-label="Fermer">×</button></div>
+      <h2 id="auth-title">REJOINDRE L'ARCADE</h2>
+      <p class="auth-description">Crée ton compte avec un pseudonyme et un mot de passe. Aucun nom réel ni e-mail n'est demandé.</p>
+      <div class="auth-tabs"><button type="button" class="auth-tab active" id="auth-tab-signup">CRÉER UN COMPTE</button><button type="button" class="auth-tab" id="auth-tab-login">SE CONNECTER</button></div>
+      <label class="auth-label" for="auth-username">PSEUDONYME</label>
+      <input id="auth-username" class="auth-input" autocomplete="username" minlength="3" maxlength="20" placeholder="ex : neo_player" />
+      <small class="auth-help">3 à 20 caractères : lettres minuscules, chiffres et _</small>
+      <label class="auth-label" for="auth-password">MOT DE PASSE</label>
+      <input id="auth-password" class="auth-input" type="password" autocomplete="new-password" minlength="8" placeholder="8 caractères minimum" />
+      <p class="auth-error" id="auth-error" role="alert"></p>
+      <button class="auth-submit" id="auth-submit">CRÉER MON COMPTE <span>→</span></button>
+      <p class="auth-footnote">Prototype sans récupération de mot de passe : conserve-le en lieu sûr. Ne réutilise pas ton mot de passe personnel.</p>
+    </div>
+  </section>
+  <div class="records-backdrop" id="records-modal" hidden><section class="records-panel"><div class="modal-top"><span class="eyebrow">PLAYER ARCHIVES</span><button class="icon-button" id="records-close">×</button></div><h2>TES RECORDS</h2><div id="records-content"></div></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
